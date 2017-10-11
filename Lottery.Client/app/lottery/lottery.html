@@ -1,0 +1,195 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading"
+         style="font-size:large">
+        Create Lottery
+    </div>
+
+    <div class="panel-body">
+        <form class="form-horizontal"
+              name="lotteryForm"
+              novalidate
+              ng-controller="lotteryController as vm">
+            <fieldset>
+                <div class="form-group"
+                     ng-class="{'has-error':lotteryForm.inputLotteryName.$invalid &&
+                                    lotteryForm.inputLotteryName.$dirty}">
+                    <label class="col-md-2 control-label"
+                           for="inputLotteryName">Lottery Name</label>
+                    <div class="col-md-4">
+                        <input class="form-control"
+                               id="inputLotteryName"
+                               name="inputLotteryName"
+                               type="text"
+                               placeholder="Lottery Name (required)"
+                               ng-model="vm.lottery.name"
+                               required
+                               ng-maxlength="12" />
+                    </div>
+                    <span class="help-block has-error">
+                        <span ng-show="lotteryForm.inputLotteryName.$error.required">
+                            Lottery name is required.
+                        </span>
+                        <span ng-show="lotteryForm.inputLotteryName.$error.maxlength">
+                            Lottery name cannot exceed 12 characters in length.
+                        </span>
+                    </span>
+                </div>
+
+                <div class="form-group"
+                     ng-class="{'has-error':lotteryForm.inputLotteryDescription.$invalid &&
+                                    lotteryForm.inputLotteryDescription.$dirty}">
+                    <label class="col-md-2 control-label" for="inputLotteryDescription">Lottery Description</label>
+
+                    <div class="col-md-8">
+                        <textarea class="form-control"
+                                  id="inputLotteryDescription"
+                                  name="inputLotteryDescription"
+                                  placeholder="Lottery Description (required)"
+                                  rows="3"
+                                  ng-model="vm.lottery.description" 
+                                  required></textarea>
+                    </div>
+                    <span class="help-block has-error"
+                          ng-show="lotteryForm.inputLotteryDescription.$invalid ">
+                        Lottery Description is required
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label"
+                           for="inputLotteryDate">Date of draw</label>
+
+                    <div class="col-md-4">
+                        <input class="form-control"
+                               id="inputDateOfDraw"
+                               name="inputDateOfDraw"
+                               type="date"
+                               placeholder="Date of draw"
+                               ng-model="vm.lottery.dateOfDraw"
+                               required>
+                    </div>
+                    <span class="help-block has-error"
+                          ng-show="lotteryForm.inputDateOfDraw.$invalid ">
+                        Date of draw is required
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label"
+                           for="inputTotalAmountOfPrimaryNumbers">Total amount of primary numbers</label>
+                    <div class="col-md-4">
+                        <input class="form-control"
+                               id="inputTotalAmountOfPrimaryNumbers"
+                               name="inputTotalAmountOfPrimaryNumbers"
+                               type="number"
+                               placeholder="Total amount of primary numbers"
+                               ng-model="vm.lottery.totalAmountOfPrimaryNumbers"
+                               required>
+                    </div>
+                    <span class="help-block has-error"
+                          ng-show="lotteryForm.inputTotalAmountOfPrimaryNumbers.$invalid ">
+                        Total Amount of Primary Numbers is required
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label"
+                           for="inputRangeOfPrimaryNumbersFrom">Range of primary numbers</label>
+                    <div class="col-md-2">
+                        <input class="form-control"
+                               id="inputRangeOfPrimaryNumbersFrom"
+                               name="inputRangeOfPrimaryNumbersFrom"
+                               type="number"
+                               placeholder="from"
+                               ng-model="vm.lottery.primaryNumbersRangeFrom"
+                               required>
+                    </div>
+      
+                    <div class="col-md-2">
+                        <input class="form-control"
+                               id="inputRangeOfPrimaryNumbersTo"
+                               name="inputRangeOfPrimaryNumbersTo"
+                               type="number"
+                               placeholder="to"
+                               ng-model="vm.lottery.primaryNumbersRangeTo"
+                               required>
+                    </div>
+                    <span class="help-block has-error"
+                          ng-show="lotteryForm.inputRangeOfPrimaryNumbersTo.$invalid ">
+                        Range is required
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label"
+                           for="inputTotalAmountOfSecondaryNumbers">Total amount of secondary numbers</label>
+                    <div class="col-md-4">
+                        <input class="form-control"
+                               id="inputTotalAmountOfSecondaryNumbers"
+                               name="inputTotalAmountOfSecondaryNumbers"
+                               type="number"
+                               placeholder="Total amount of secondary numbers"
+                               ng-model="vm.lottery.totalAmountOfSecondaryNumbers"
+                               required>
+                    </div>
+                    <span class="help-block has-error"
+                          ng-show="lotteryForm.inputTotalAmountOfSecondaryNumbers.$invalid ">
+                        Total amount of secondary numbers is required
+                    </span>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label"
+                           for="inputRangeOfSecondaryNumbersFrom">Range of secondary numbers</label>
+                    <div class="col-md-2">
+                        <input class="form-control"
+                               id="inputRangeOfSecondaryNumbersFrom"
+                               name="inputRangeOfSecondaryNumbersFrom"
+                               type="number"
+                               placeholder="from"
+                               ng-model="vm.lottery.secondaryNumbersRangeFrom"
+                               required>
+                    </div>
+                    <div class="col-md-2">
+                        <input class="form-control"
+                               id="inputRangeOfSecondaryNumbersTo"
+                               name="inputRangeOfSecondaryNumbersTo"
+                               type="number"
+                               placeholder="to"
+                               ng-model="vm.lottery.secondaryNumbersRangeTo"
+                               required>
+                    </div>
+                    <span class="help-block has-error"
+                          ng-show="lotteryForm.inputRangeOfSecondaryNumbersTo.$invalid ">
+                        Range is required
+                    </span>
+                    <br />
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-4 col-md-offset-2">
+                        <span>
+                            <button class="btn btn-primary"
+                                    style="width:80px;margin-right:10px"
+                                    ng-click="vm.submit()"
+                                    ng-disabled="lotteryForm.$invalid">
+                                Save
+                            </button>
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="form-group"
+                     ng-show="vm.message">
+                    <div class="col-md-6">
+                        <pre style="font: inherit">{{vm.message }}</pre>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+
+    </div>
+</div>

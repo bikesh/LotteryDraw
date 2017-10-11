@@ -1,0 +1,8 @@
+C:\Users\bikes_000\Downloads\passing-parameters\APM\Lottery.Data\bin\Debug\Lottery.Data.dll
+C:\Users\bikes_000\Downloads\passing-parameters\APM\Lottery.Data\bin\Debug\Lottery.Data.pdb
+C:\Users\bikes_000\Downloads\passing-parameters\APM\Lottery.Data\obj\Debug\Lottery.Data.dll
+C:\Users\bikes_000\Downloads\passing-parameters\APM\Lottery.Data\obj\Debug\Lottery.Data.pdb
+C:\Users\bikes_000\Desktop\sis\Lottery.Data\bin\Debug\Lottery.Data.dll
+C:\Users\bikes_000\Desktop\sis\Lottery.Data\bin\Debug\Lottery.Data.pdb
+C:\Users\bikes_000\Desktop\sis\Lottery.Data\obj\Debug\Lottery.Data.dll
+C:\Users\bikes_000\Desktop\sis\Lottery.Data\obj\Debug\Lottery.Data.pdb

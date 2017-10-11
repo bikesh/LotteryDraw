@@ -1,0 +1,59 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading"
+         style="font-size:large">
+        Edit Lottery
+    </div>
+
+    <div class="panel-body">
+        <form class="form-horizontal"
+              name="lotteryFormEdit"
+              novalidate
+              ng-controller="lotteryEditController as vm">
+            <fieldset>
+                <div class="form-group"
+                     ng-class="{'has-error':lotteryFormEdit.inputLotteryName.$invalid &&
+                                    lotteryFormEdit.inputLotteryName.$dirty}">
+                    <label class="col-md-2 control-label"
+                           for="inputLotteryName">Lottery Name</label>
+                    <div class="col-md-4">
+
+                        <select ng-model="vm.selectedLottery" ng-change="vm.dropdownChanged()"
+                                ng-options="item.Name for item in vm.lotteryList"></select>
+
+                        <fieldset data-ng-repeat="choice in vm.selectedLottery.winningPrimaryNumbers">
+                            <input type="text" ng-model="choice.value" name="primarNo$index" placeholder="Enter primary number" required>
+                        </fieldset>
+
+                        <fieldset data-ng-repeat="choice in vm.selectedLottery.winningSecondaryNumbers">
+                            <input type="text" ng-model="choice.value" name="secondaryNo$index" placeholder="Enter secondary number" required>
+                        </fieldset>
+                    </div>
+                    <span class="help-block has-error">
+                        <span ng-show="lotteryFormEdit.inputLotteryName.$error.required">
+                            Lottery name is required.
+                        </span>
+                    </span>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div class="col-md-4 col-md-offset-2">
+                        <span>
+                            <button class="btn btn-primary"
+                                    style="width:80px;margin-right:10px"
+                                    ng-click="vm.submit()"
+                                    ng-disabled="lotteryFormEdit.$invalid">
+                                Save
+                            </button>
+                        </span>
+
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+
+
+    </div>
+</div>

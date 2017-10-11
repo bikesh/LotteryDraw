@@ -1,0 +1,39 @@
+﻿<div class="panel panel-primary"
+     ng-controller="lotterySearchController as vm">
+    <div class="panel-heading"
+         style="font-size:large">
+        <label>Search: <input ng-model="searchText.DateOfDraw" class="form-control"></label>
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <td>Name</td>
+                    <td>Description</td>
+                    <td>Date of Draw</td>
+                    <td>Total Amount of Primary Numbers</td>
+                    <td>Primary Numbers Range</td>
+                    <td>Total Amount Of SecondaryNumbers</td>
+                    <td>Secondary Numbers Range</td>
+                    <td>Winning Primary Numbers</td>
+                    <td>Winning Secondary Numbers</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="lottery in vm.lotteries | filter: searchText">
+                    <td>{{ lottery.Name}}</td>
+                    <td>{{ lottery.Description}}</td>
+                    <td>{{ lottery.DateOfDraw| date: 'dd/MM/yyyy' }}</td>
+                    <td>{{ lottery.TotalAmountOfPrimaryNumbers}}</td>
+                    <td>{{ lottery.PrimaryNumbersRange.From }} - {{ lottery.PrimaryNumbersRange.To}}  </td>
+                    <td>{{lottery.TotalAmountOfSecondaryNumbers}}</td>
+                    <td>{{lottery.SecondaryNumbersRange.From}} - {{lottery.SecondaryNumbersRange.To}}</td>
+                    <td>{{lottery.WinningPrimaryNumbersCsv}}</td>
+                    <td>{{lottery.WinningSecondaryNumbersCsv}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

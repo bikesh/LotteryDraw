@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Lottery.Client", "http://localhost:52436", "{6F65E884-B3D0-4A64-8362-753B79E4AB82}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_52436"
+		Debug.AspNetCompiler.PhysicalPath = "Lottery.Client\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52436\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_52436"
+		Release.AspNetCompiler.PhysicalPath = "Lottery.Client\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_52436\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Lottery.Client\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.WebApi", "Lottery.WebApi\Lottery.WebApi.csproj", "{CCC7792F-67D8-441B-9338-6C85F988EA0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Tests", "Lottery.Tests\Lottery.Tests.csproj", "{7B5A15A0-0547-44D2-B9D7-EC369E5965C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lottery.Data", "Lottery.Data\Lottery.Data.csproj", "{B004D8CB-85B2-4FBD-9277-38144DD23FC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F65E884-B3D0-4A64-8362-753B79E4AB82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F65E884-B3D0-4A64-8362-753B79E4AB82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F65E884-B3D0-4A64-8362-753B79E4AB82}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F65E884-B3D0-4A64-8362-753B79E4AB82}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{CCC7792F-67D8-441B-9338-6C85F988EA0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC7792F-67D8-441B-9338-6C85F988EA0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC7792F-67D8-441B-9338-6C85F988EA0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC7792F-67D8-441B-9338-6C85F988EA0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5A15A0-0547-44D2-B9D7-EC369E5965C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5A15A0-0547-44D2-B9D7-EC369E5965C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5A15A0-0547-44D2-B9D7-EC369E5965C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5A15A0-0547-44D2-B9D7-EC369E5965C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B004D8CB-85B2-4FBD-9277-38144DD23FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B004D8CB-85B2-4FBD-9277-38144DD23FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B004D8CB-85B2-4FBD-9277-38144DD23FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B004D8CB-85B2-4FBD-9277-38144DD23FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
